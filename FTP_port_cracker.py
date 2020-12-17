@@ -9,7 +9,7 @@ def connection(ip, user, passw):
 	sock.connect(('ip_number_here', port_number_here))
 
 	data = sock.recv(1024)
-
+        #At most 1024 bytes(this is the maximum amount of data that will be returned).
 	sock.send('User' + user * '\r\n')
 
 	data = sock.recv(1024)
